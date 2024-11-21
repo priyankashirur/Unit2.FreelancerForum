@@ -1,7 +1,6 @@
 // === State ===
 // Here, we define variables for the data that our program needs to remember.
-// We call this data "state" because it represents the state of our program.
-// This is also where we define functions to modify the state.
+
 const occupations = [
   "Programmer",
   "Writer",
@@ -53,9 +52,6 @@ function addPerson() {
 
 // === Render ===
 // To "render" is to update the DOM to reflect the current state.
-// In this section, we define the functions to render state.
-
-/** Updates the DOM to reflect the current state. */
 
 function calculateAveragePrice() {
   let totalprice = 0;
@@ -68,20 +64,8 @@ function calculateAveragePrice() {
   ).textContent = `Average Starting Price: $${avgprice}`;
 }
 
-// function render() {
-//   const freeList = document.querySelector("#freelancer");
-//   const peopleElements = freelancers.map((freelancer) => {
-//     const peopleElement = document.createElement("li");
-//     peopleElement.textContent = `${freelancer.name} - ${freelancer.occupation} - $${freelancer.startprice}`;
-//     return peopleElement;
-//   });
-
-//   freeList.replaceChildren(...peopleElements);
-//   calculateAveragePrice();
-// }
-
 function render() {
-  const tableBody = document.querySelector("table-table tbody");
+  const tbody = document.querySelector("table tbody");
 
   const rows = freelancers.map((freelancer) => {
     const row = document.createElement("tr");
@@ -111,10 +95,6 @@ function render() {
 // === Script ===
 // In this section, we call the functions that we've defined above.
 
-// `setInterval` will call the callback function every 1000 milliseconds (1 second)
-// and return an interval ID that we can use to stop the interval later.
-// Calling `clearInterval(addShapeIntervalId)` will stop the interval.
-
 const addIntervalId = setInterval(() => {
   // TODO: Stop adding shapes if we've reached the maximum number of shapes
 
@@ -124,6 +104,6 @@ const addIntervalId = setInterval(() => {
   } else {
     clearInterval(addIntervalId);
   }
-}, 2000);
+}, 3000);
 
 render();

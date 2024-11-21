@@ -10,9 +10,26 @@ li {
 }
 
 header {
-  background-color: #007bff;
+  background-color: #65a6eb;
   color: white;
-  width: 100%;
+  width: 500px;
   padding: 20px;
   text-align: center;
+  border-radius: 8px;
+}
+
+table {
+  width: 500px;
+  text-align: center;
+  border: none;
+}
+
+th {
+  border: none;
+  padding: 10px;
+  text-decoration: underline;
+}
+td {
+  border: none;
+  padding: 10px;
 }
